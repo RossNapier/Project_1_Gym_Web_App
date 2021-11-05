@@ -21,3 +21,5 @@ class3 = Class("Yoga", "18/11/21", 6.00, 60)
 class_repo.save(class1)
 class_repo.save(class2)
 class_repo.save(class3)
+
+pdb.set_trace()
