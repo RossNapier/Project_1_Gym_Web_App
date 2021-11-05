@@ -1,4 +1,4 @@
-class Classes:
+class Class:
     def __init__(self, name, date, time, duration, id = None):
         self.name = name
         self.date = date
