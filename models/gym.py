@@ -1,6 +1,5 @@
 class Gym:
-    def __init__(self, name, address, phone_no, id = None):
-        self.name = name
-        self.address = address
-        self.phone_no = phone_no
+    def __init__(self, member, gym_class, id = None):
+        self.member = member
+        self.gym_class = gym_class
         self.id = id
