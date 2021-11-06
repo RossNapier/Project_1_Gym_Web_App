@@ -24,4 +24,4 @@ class_repo.save(class2)
 class_repo.save(class3)
 class_repo.save(class4)
 
-# pdb.set_trace()
+pdb.set_trace()
