@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'style.css') }}">
+        <title>Gym Classes List</title>
+    </head>
+    <body>
+    <h1>Gym Classes Details</h1><br>
+    
+    {% for class in all_classes %}
+
+    <p class="classes">
+        {{ class.id }} <b>{{ class.name }} {{ class.date }} {{ class.time }} {{ class.duration }} mins</b>
+    </p>
+    {% endfor %}
+    </body>
+</html>

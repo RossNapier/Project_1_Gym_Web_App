@@ -5,7 +5,7 @@ CREATE TABLE classes(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     date VARCHAR(255),
-    time FLOAT,
+    time VARCHAR(255),
     duration INT
 );
 

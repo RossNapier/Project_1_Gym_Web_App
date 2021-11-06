@@ -14,12 +14,14 @@ member_repo.save(member1)
 member_repo.save(member2)
 member_repo.save(member3)
 
-class1 = Class("HIIT", "13/11/21", 18.00, 30)
-class2 = Class("Boxing", "15/11/21", 20.00, 45)
-class3 = Class("Yoga", "18/11/21", 6.00, 60)
+class1 = Class("HIIT", "13/11/21", "18.00", 30)
+class2 = Class("Boxing", "15/11/21", "20.00", 45)
+class3 = Class("Yoga", "18/11/21", "06.00", 60)
+class4 = Class("Cycle", "19/11/21", "06.00", 30)
 
 class_repo.save(class1)
 class_repo.save(class2)
 class_repo.save(class3)
+class_repo.save(class4)
 
-pdb.set_trace()
+# pdb.set_trace()
