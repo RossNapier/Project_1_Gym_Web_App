@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+    background-color: crimson;
+    color: white;
+    width: 200px;
+}
+
+a {
+    text-decoration: None;
+    color: white;
+}
+
+a:visited {
+    text-decoration: None;
+}
+
+a:hover {
+    text-decoration: None;
+    color: maroon;
+}
+
+.members {
+    background-color: lightcoral;
+    padding: 10px;
+    margin: 2px;
+}

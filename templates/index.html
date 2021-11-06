@@ -1,8 +1,11 @@
 <html>
-    <!-- <link rel = "stylesheet" href = "{{ url_for('static', filename = 'style.css') }}"> -->
-    
-    <h1>Welcome to the Gym App</h1><br>
-
-    <button><a href="/members">View Members</a></button>
-
+    <head>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'style.css') }}">
+        <title>Gym Member List</title>
+    </head>
+    <body>
+        <h1>Welcome to the Gym App</h1>
+        <button><a href="/members"><b>VIEW MEMBERS</b></a></button>
+        <button><a href="/classes"><b>VIEW CLASSES</b></button>
+    </body>
 </html>
