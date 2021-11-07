@@ -6,12 +6,15 @@
     <body>
     <h1>Gym Members Details</h1><br>
     
-        <button><a href="/members/new"><b>NEW MEMBER</b></a></button>
+        <button class = "big-button"><a href="/members/new">New Member</a></button>
 
     {% for member in all_members %}
 
     <p class="members">
-        {{ member.id }}<b>{{ member.first_name }} {{ member.second_name }}</b>
+        {{ member.id }}
+        <button class = "edit-button"><a href = "/edit">Edit</a></button>
+        <b>{{ member.first_name }} {{ member.second_name }}</b>
+        {{ member.phone_no }}
     </p>
     {% endfor %}
     </body>

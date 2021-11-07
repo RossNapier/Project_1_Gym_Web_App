@@ -9,7 +9,19 @@ button {
     margin: 5px;
     background-color: crimson;
     color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.big-button {
     width: 200px;
+}
+
+.edit-button {
+    padding: 5px;
+    border-radius: 3px;
+    background-color: None;
+    border: 1px;
 }
 
 a {
@@ -23,7 +35,7 @@ a:visited {
 
 a:hover {
     text-decoration: None;
-    color: maroon;
+    color: black;
 }
 
 .members {
