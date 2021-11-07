@@ -1,0 +1,18 @@
+<form action = "/members/{{ member.id }}" method = "post">
+
+    <div>
+        <label for = "first_name">FIRST NAME</label><br>
+        <input type = "text" id = "first_name" name = "first_name" value = "{{ member.first_name }}" required autofocus>
+    </div>
+    <div>
+        <label for = "second_name">SECOND NAME</label><br>
+        <input type = "text" id = "second_name" name = "second_name" value = "{{ member.second_name }}" required autofocus>
+    </div>
+    <div>
+        <label for = "phone_no">PHONE NUMBER</label><br>
+        <input type = "text" id = "phone_no" name = "phone_no" value = "{{ member.phone_no }}" required>
+    </div>
+
+    <button type = "submit">Update Member</button>
+
+</form>
