@@ -5,7 +5,7 @@ from models.member import Member
 
 members_blueprint = Blueprint("members", __name__)
 
-# Lists gym members
+# Lists all from members table in database
 @members_blueprint.route("/members")
 def members():
     members = member_repo.select_all()
@@ -28,11 +28,13 @@ def create_member():
     member_repo.save(new_member)
     return redirect('/members')
 
+
 # Allows user to edit exisiting details via a form
 @members_blueprint.route("/members/<id>/edit", methods = ['GET'])
 def edit_member(id):
     member = member_repo.select(id)
     return render_template('members/edit.html', member = member)
+
 
 # Updates members table in database with editted member from above form
 @members_blueprint.route("/members/<id>", methods = ['POST'])
