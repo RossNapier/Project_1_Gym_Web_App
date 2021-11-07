@@ -8,3 +8,7 @@ members_blueprint = Blueprint("members", __name__)
 def members():
     members = member_repo.select_all()
     return render_template("members/show.html", all_members = members)
+
+@members_blueprint.route("/members/new")
+def new_member():
+    return render_template("members/new.html")
