@@ -1,0 +1,22 @@
+<form action = "/classes/{{ gym_class.id }}" method = "post">
+
+    <div>
+        <label for = "name">NAME</label><br>
+        <input type = "text" id = "name" name = "name" value = "{{ gym_class.name }}" required autofocus>
+    </div>
+    <div>
+        <label for = "date">DATE</label><br>
+        <input type = "text" id = "date" name = "date" value = "{{ gym_class.date }}" required autofocus>
+    </div>
+    <div>
+        <label for = "time">TIME</label><br>
+        <input type = "text" id = "time" name = "time" value = "{{ gym_class.time }}" required>
+    </div>
+    <div>
+        <label for = "duration">DURATION</label><br>
+        <input type = "text" id = "duration" name = "duration" value = "{{ gym_class.duration }}" required>
+    </div>
+
+    <button type = "submit">Update Class</button>
+
+</form>

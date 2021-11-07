@@ -11,7 +11,12 @@
     {% for class in all_classes %}
 
     <p class="classes">
-        {{ class.id }} <b>{{ class.name }} {{ class.date }} {{ class.time }} {{ class.duration }} mins</b>
+        {{ class.id }}
+        <button class = "edit-button"><a href = "/classes/{{ class.id }}/edit">Edit</a></button>
+        <b>{{ class.name }}</b>
+        {{ class.date }}
+        {{ class.time }}
+        {{ class.duration }} mins
     </p>
     {% endfor %}
     </body>
