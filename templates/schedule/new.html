@@ -1,0 +1,22 @@
+<form action = "/schedule" method = "post">
+
+    <div>
+        <label for = "member">GYM MEMBER</label>
+        <select id = "member" name = "member_id">
+        {% for item in schedule %}
+            <option value = "{{ item.member.id }}"> {{ item.member.first_name }} {{ item.member.second_name }} </option>
+        {% endfor %}
+        </select>
+    </div>
+
+    <div>
+        <label for = "class">CLASS</label>
+        <select id = "class" name = "class_id">
+        {% for item in schedule %}
+            <option value = "{{ item.gym_class.id }}"> {{ item.gym_class.name }} ({{ item.gym_class.date }}, {{ item.gym_class.time }} </option>
+        {% endfor %}
+        </select>
+    </div>
+
+
+</form>

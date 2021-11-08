@@ -33,5 +33,4 @@ schedule_repo.save(booking2)
 booking3 = Schedule(member3, class2)
 schedule_repo.save(booking3)
 
-
 # pdb.set_trace()

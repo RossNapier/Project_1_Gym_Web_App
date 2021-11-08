@@ -11,3 +11,8 @@ schedule_blueprint = Blueprint("schedule", __name__)
 def schedule():
     schedule = schedule_repo.select_all()
     return render_template("schedule/show.html", schedule = schedule)
+
+@schedule_blueprint.route("/schedule/book")
+def book():
+    schedule = schedule_repo.select_all()
+    return render_template("schedule/new.html", schedule = schedule)
