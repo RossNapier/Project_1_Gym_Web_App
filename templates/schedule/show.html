@@ -4,16 +4,12 @@
         <title>Gym Schedule</title>
     </head>
     <body>
-    <h1>Gym Schedule</h1><br>
+    <h1>{{ gym_class.name }} Attendees:</h1><br>
     
-    {% for item in schedule %}
     <ul>
-        <li>
-                <div class = "schedule-listing">
-                <b>{{ item.gym_class.name }}</b>
-                - Attendees: {{ item.member.first_name }} {{ item.member.second_name }}</div>
-        </li>
+        {% for member in members %}
+        <li> {{ member.first_name }} {{ member.second_name }} </li>
+        {% endfor %}
     </ul>
-    {% endfor %}
     </body>
 </html>

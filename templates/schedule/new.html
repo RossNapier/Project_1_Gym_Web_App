@@ -1,4 +1,4 @@
-<form action = "/schedule" method = "post">
+<form action = "/schedule/new" method = "post">
 
     <div>
         <label for = "member">GYM MEMBER</label>
@@ -8,12 +8,11 @@
         {% endfor %}
         </select>
     </div>
-
     <div>
         <label for = "class">CLASS</label>
         <select id = "class" name = "class_id">
         {% for gym_class in classes %}
-            <option value = "{{ gym_class.id }}"> <b>{{ gym_class.name }}</b> ({{ gym_class.date }}, {{ gym_class.time }} </option>
+            <option value = "{{ gym_class.id }}"> {{ gym_class.name }} ( {{ gym_class.date }}, {{ gym_class.time }}) </option>
         {% endfor %}
         </select>
     </div>
