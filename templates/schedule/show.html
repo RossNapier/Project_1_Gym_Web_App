@@ -9,8 +9,9 @@
     {% for item in schedule %}
     <ul>
         <li>
-                <div class = "class-name"><b>{{ item.class_id.name }}</b></div>
-                <br>{{ item.member_id.name }}
+                <div class = "schedule-listing">
+                <b>{{ item.gym_class.name }}</b>
+                - Attendees: {{ item.member.first_name }} {{ item.member.second_name }}</div>
         </li>
     </ul>
     {% endfor %}
