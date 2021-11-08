@@ -3,8 +3,8 @@
     <div>
         <label for = "member">GYM MEMBER</label>
         <select id = "member" name = "member_id">
-        {% for item in schedule %}
-            <option value = "{{ item.member.id }}"> {{ item.member.first_name }} {{ item.member.second_name }} </option>
+        {% for member in members %}
+            <option value = "{{ member.id }}"> {{ member.first_name }} {{ member.second_name }} </option>
         {% endfor %}
         </select>
     </div>
@@ -12,11 +12,12 @@
     <div>
         <label for = "class">CLASS</label>
         <select id = "class" name = "class_id">
-        {% for item in schedule %}
-            <option value = "{{ item.gym_class.id }}"> {{ item.gym_class.name }} ({{ item.gym_class.date }}, {{ item.gym_class.time }} </option>
+        {% for gym_class in classes %}
+            <option value = "{{ gym_class.id }}"> <b>{{ gym_class.name }}</b> ({{ gym_class.date }}, {{ gym_class.time }} </option>
         {% endfor %}
         </select>
     </div>
 
+    <button type = "submit">Add Member to Class</button>
 
 </form>
