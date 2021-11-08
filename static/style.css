@@ -13,6 +13,11 @@ button {
     font-weight: bold;
 }
 
+ul {
+    text-transform: uppercase;
+    list-style-type: none;
+}
+
 .big-button {
     width: 200px;
 }

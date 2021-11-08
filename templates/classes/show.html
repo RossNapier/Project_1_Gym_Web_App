@@ -9,15 +9,16 @@
     <button class = "big-button"><a href="/classes/new">New Class</a></button>
 
     {% for class in all_classes %}
-
-    <p class="classes">
-        {{ class.id }}
-        <button class = "edit-button"><a href = "/classes/{{ class.id }}/edit">Edit</a></button>
-        <b>{{ class.name }}</b>
-        {{ class.date }}
-        {{ class.time }}
-        {{ class.duration }} mins
-    </p>
+    <ul>
+        <li>
+                <div class = "class-name"><b>{{ class.name }}</b></div>
+                <br>Class ID: {{ class.id }}                
+                <br>{{ class.date }}
+                <br>{{ class.time }}
+                <br>{{ class.duration }} mins<br>
+                <button class = "big-button"><a href = "/classes/{{ class.id }}/edit">Edit</a></button>
+        </li>
+    </ul>
     {% endfor %}
     </body>
 </html>

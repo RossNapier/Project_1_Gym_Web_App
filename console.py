@@ -1,10 +1,12 @@
 import pdb
-from models.gym import Gym
+from models.schedule import Schedule
 from models.gym_class import Class
 from models.member import Member
 
 import repositories.member_repository as member_repo
 import repositories.class_repository as class_repo
+import repositories.schedule_repository as schedule_repo
+
 
 member1 = Member("Steve", "Rogers", "0131 234 3544")
 member2 = Member("Peter", "Parker", "0131 564 4332")
@@ -24,4 +26,7 @@ class_repo.save(class2)
 class_repo.save(class3)
 class_repo.save(class4)
 
-# pdb.set_trace()
+booking1 = Schedule(member1, class1)
+schedule_repo.save(booking1)
+
+pdb.set_trace()
