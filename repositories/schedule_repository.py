@@ -12,7 +12,7 @@ def save(booking):
 
 def select_all():
     schedule = []
-    sql = "SELECT * FROM classes"
+    sql = "SELECT * FROM schedule"
     results = run_sql(sql)
 
     for row in results:

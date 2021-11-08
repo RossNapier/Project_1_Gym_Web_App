@@ -29,4 +29,4 @@ class_repo.save(class4)
 booking1 = Schedule(member1, class1)
 schedule_repo.save(booking1)
 
-pdb.set_trace()
+# pdb.set_trace()
