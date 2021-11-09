@@ -1,7 +1,11 @@
 class Class:
-    def __init__(self, name, date, time, duration, id = None):
+    def __init__(self, name, date, time, duration, fully_booked = False, id = None):
         self.name = name
         self.date = date
         self.time = time
         self.duration = duration
+        self.fully_booked = fully_booked
         self.id = id
+    
+    def class_full(self):
+        self.fully_booked = True

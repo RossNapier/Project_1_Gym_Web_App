@@ -8,7 +8,8 @@ CREATE TABLE classes(
     name VARCHAR(255),
     date VARCHAR(255),
     time VARCHAR(255),
-    duration INT
+    duration INT,
+    fully_booked BOOLEAN
 );
 
 CREATE TABLE members(
