@@ -8,12 +8,12 @@ import repositories.class_repository as class_repo
 import repositories.schedule_repository as schedule_repo
 
 
-member1 = Member("Steve", "Rogers", "07586 303022", False)
-member2 = Member("Peter", "Parker", "07868 391910")
+member1 = Member("Steve", "Rogers", "07586 303022")
+member2 = Member("Tony", "Stark", "07868 391910")
 member3 = Member("Natasha", "Romanoff", "07594 030029")
 member4 = Member("Pepper", "Potts", "07982 392938")
 member5 = Member("Steven", "Strange", "07352 182818")
-member6 = Member("Peter", "Quill", "07691 092991")
+member6 = Member("Peter", "Parker", "07691 092991")
 member7 = Member("Bruce", "Banner", "07482 238818")
 member8 = Member("Carol", "Danvers", "07493 1048282")
 member9 = Member("Janet", "Van Dyne", "07949 929299")

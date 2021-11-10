@@ -8,7 +8,7 @@ members_blueprint = Blueprint("members", __name__)
 # Lists all from members table in database
 @members_blueprint.route("/members")
 def members():
-    members = member_repo.select_all()
+    members = member_repo.select_active_members()
     return render_template("members/show.html", all_members = members)
 
 
@@ -42,6 +42,26 @@ def update_member(id):
     first_name = request.form['first_name']
     second_name = request.form['second_name']
     phone_no = request.form['phone_no']
-    member = Member(first_name, second_name, phone_no, id)
+    active = request.form['active']
+    member = Member(first_name, second_name, phone_no, active, id)
+    if active == "no":
+        Member.inactive(member)
+    else:
+        Member.active(member)
     member_repo.update(member)
     return redirect('/members')
+
+@members_blueprint.route("/members/inactive")
+def inactive_members():
+    members = member_repo.select_inactive_members()
+    return render_template("members/inactive.html", all_members = members)
+
+
+# @members_blueprint.route("/members/<id>/active", methods = ['POST'])
+# def update_activity(id):
+#     first_name = request.form['first_name']
+#     second_name = request.form['second_name']
+#     phone_no = request.form['phone_no']
+#     member = Member(first_name, second_name, phone_no, id)
+#     member_repo.update(member)
+#     return redirect('/members')

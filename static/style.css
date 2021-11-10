@@ -69,6 +69,11 @@ input {
     text-align: center;
 }
 
+#active {
+    width: fit-content;
+}
+
+
 body a {
     text-decoration: None;
     color: white;

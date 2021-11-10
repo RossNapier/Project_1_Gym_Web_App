@@ -8,3 +8,6 @@ class Member:
 
     def inactive(self):
         self.active = False
+    
+    def active(self):
+        self.active = True
