@@ -5,3 +5,6 @@ class Member:
         self.phone_no = phone_no
         self.active = active
         self.id = id
+
+    def inactive(self):
+        self.active = False

@@ -33,3 +33,14 @@ def update(member):
     sql = "UPDATE members SET(first_name, second_name, phone_no, active) = (%s, %s, %s) WHERE id = %s"
     values = [member.first_name, member.second_name, member.phone_no, member.active, member.id]
     run_sql(sql, values)
+
+def select_active_members():
+    members = []
+    sql = "SELECT * FROM members"
+    results = run_sql(sql)
+
+    for row in results:
+        member = Member(row['first_name'], row['second_name'], row['phone_no'], row['active'], row['id'])
+        if member.active == True:
+            members.append(member)
+    return members

@@ -10,9 +10,8 @@ schedule_blueprint = Blueprint("schedule", __name__)
 # Creates form to allow assigning member to class
 @schedule_blueprint.route("/book")
 def book():
-    members = member_repo.select_all()
+    members = member_repo.select_active_members()
     classes = class_repo.select_available_classes()
-
     return render_template("schedule/new.html", members = members, classes = classes)
 
 

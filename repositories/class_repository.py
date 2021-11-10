@@ -35,6 +35,7 @@ def update(gym_class):
     values = [gym_class.name, gym_class.date, gym_class.time, gym_class.duration, gym_class.fully_booked, gym_class.id]
     run_sql(sql, values)
 
+
 def members(gym_class):
     members = []
     sql = "SELECT members.* FROM members INNER JOIN schedule ON schedule.member_id = members.id WHERE class_id = %s"
@@ -42,8 +43,9 @@ def members(gym_class):
     results = run_sql(sql, values)
 
     for row in results:
-        member = Member(row['first_name'], row['second_name'], row['phone_no'], row['id'])
-        members.append(member)
+        member = Member(row['first_name'], row['second_name'], row['phone_no'], row['active'], row['id'])
+        if member.active == True:   
+            members.append(member)
     return members
 
 def check_class(gym_class):
