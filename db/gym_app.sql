@@ -16,7 +16,8 @@ CREATE TABLE members(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(255),
     second_name VARCHAR(255),
-    phone_no VARCHAR(255)
+    phone_no VARCHAR(255),
+    active BOOLEAN
 );
 
 CREATE TABLE schedule(

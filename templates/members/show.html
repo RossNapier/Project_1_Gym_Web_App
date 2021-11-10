@@ -1,21 +1,19 @@
-<html>
-    <head>
-        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'style.css') }}">
-        <title>Gym Member List</title>
-    </head>
-    <body>
+{% extends "base.html" %}
+{% block content %}
+
     <h1>Gym Members Details</h1><br>
     
     <button class = "big-button"><a href="/members/new">New Member</a></button>
 
-    {% for member in all_members %}
-
-    <p class="members">
-        {{ member.id }}
-        <button class = "edit-button"><a href = "/members/{{ member.id }}/edit">Edit</a></button>
-        <b>{{ member.first_name }} {{ member.second_name }}</b>
-        {{ member.phone_no }}
-    </p>
-    {% endfor %}
-    </body>
-</html>
+        {% for member in all_members %}
+            <section class="members">
+                <p>
+                    Member ID: {{ member.id }}&nbsp;
+                    <button class = "edit-button"><a href = "/members/{{ member.id }}/edit">Edit</a></button>
+                    &nbsp;<b>{{ member.first_name }} {{ member.second_name }}</b> - 
+                    {{ member.phone_no }}
+                </p>
+                <hr>
+            </section>
+        {% endfor %}
+{% endblock %}

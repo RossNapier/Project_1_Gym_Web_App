@@ -1,22 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
 <form action = "/schedule/new" method = "post">
 
     <div>
-        <label for = "member">GYM MEMBER</label>
+        <label for = "member">GYM MEMBER</label><br>
         <select id = "member" name = "member_id">
         {% for member in members %}
             <option value = "{{ member.id }}"> {{ member.first_name }} {{ member.second_name }} </option>
         {% endfor %}
         </select>
-    </div>
+    </div><br>
     <div>
-        <label for = "class">CLASS</label>
+        <label for = "class">CLASS</label><br>
         <select id = "class" name = "class_id">
         {% for gym_class in classes %}
-            <option value = "{{ gym_class.id }}"> {{ gym_class.name }} ( {{ gym_class.date }}, {{ gym_class.time }}) </option>
+            <option value = "{{ gym_class.id }}"> {{ gym_class.name }} ({{ gym_class.date }}, {{ gym_class.time }}) </option>
         {% endfor %}
         </select>
     </div>
-
-    <button type = "submit">Add Member to Class</button>
+    <br>
+    <button type = "submit" class = "big-button">Book In</button>
 
 </form>
+
+{% endblock %}

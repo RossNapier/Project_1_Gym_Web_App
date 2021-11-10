@@ -47,7 +47,7 @@ def members(gym_class):
     return members
 
 def check_class(gym_class):
-    if len(members(gym_class)) > 3:
+    if len(members(gym_class)) > 9:
         Class.class_full(gym_class)
         update(gym_class)
 
