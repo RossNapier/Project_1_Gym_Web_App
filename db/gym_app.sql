@@ -8,14 +8,16 @@ CREATE TABLE classes(
     name VARCHAR(255),
     date VARCHAR(255),
     time VARCHAR(255),
-    duration INT
+    duration INT,
+    fully_booked BOOLEAN
 );
 
 CREATE TABLE members(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(255),
     second_name VARCHAR(255),
-    phone_no VARCHAR(255)
+    phone_no VARCHAR(255),
+    active BOOLEAN
 );
 
 CREATE TABLE schedule(

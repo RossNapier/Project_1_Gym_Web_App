@@ -1,25 +1,17 @@
-<html>
-    <head>
-        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'style.css') }}">
-        <title>Gym Classes List</title>
-    </head>
-    <body>
-    <h1>Gym Classes Details</h1><br>
-    
-    <button class = "big-button"><a href="/classes/new">New Class</a></button>
+{% extends "base.html" %}
+{% block content %}
 
-    {% for class in all_classes %}
-    <ul>
-        <li>
-                <div class = "class-name"><b>{{ class.name }}</b></div>
-                <br>Class ID: {{ class.id }}                
+    <h1>Gym Classes Details</h1><br>
+    <button class = "big-button"><a href="/classes/new">New Class</a></button>
+    <section class = "grid">
+        {% for class in all_classes %}
+            <div><b class = "class-name">{{ class.name }}</b><br>
                 <br>{{ class.date }}
                 <br>{{ class.time }}
-                <br>{{ class.duration }} mins<br>
-                <button class = "big-button"><a href = "/schedule/{{ class.id }}">View Attendees</a></button>
+                <br>{{ class.duration }} mins<br><br>
+                <button class = "big-button"><a href = "/schedule/{{ class.id }}">View Attendees</a></button><br>
                 <button class = "big-button"><a href = "/classes/{{ class.id }}/edit">Edit</a></button>
-        </li>
-    </ul>
-    {% endfor %}
-    </body>
-</html>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}

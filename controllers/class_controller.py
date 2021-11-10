@@ -30,7 +30,7 @@ def create_class():
     return redirect('/classes')
 
 
-# Allows user to edit exisiting class details via a form
+# Allows user to edit existing class details via a form
 @classes_blueprint.route("/classes/<id>/edit", methods = ['GET'])
 def edit_class(id):
     gym_class = class_repo.select(id)
@@ -44,6 +44,6 @@ def update_class(id):
     date = request.form['date']
     time = request.form['time']
     duration = request.form['duration']
-    gym_class = Class(name, date, time, duration, id)
+    gym_class = Class(name, date, time, duration, False, id)
     class_repo.update(gym_class)
     return redirect('/classes')

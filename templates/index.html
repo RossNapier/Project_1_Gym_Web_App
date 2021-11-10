@@ -1,12 +1,9 @@
-<html>
-    <head>
-        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'style.css') }}">
-        <title>Welcome to the Gym</title>
-    </head>
-    <body>
-        <h1>Welcome to the Gym App</h1>
+{% extends "base.html" %}
+{% block content %}
+
+        <h1>Welcome to ultimateFITNESS</h1>
         <button class = "big-button"><a href="/members">View Members</a></button>
-        <button class = "big-button"><a href="/classes">View Classes</button>
-        <button class = "big-button"><a href="/book">Book Class</button>
-    </body>
-</html>
+        <button class = "big-button"><a href="/classes">View Classes</a></button>
+        <button class = "big-button"><a href="/book">Book Class</a></button>
+
+{% endblock %}

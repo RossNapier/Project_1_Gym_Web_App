@@ -1,22 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
 <form action = "/classes" method = "post">
 
     <div>
         <label for = "name">NAME</label><br>
         <input type = "text" id = "name" name = "name" required autofocus>
-    </div>
+    </div><br>
     <div>
         <label for = "date">DATE</label><br>
         <input type = "text" id = "date" name = "date" placeholder = "DD/MM/YY" required autofocus>
-    </div>
+    </div><br>
     <div>
         <label for = "time">TIME</label><br>
         <input type = "text" id = "time" name = "time" placeholder = "06.00 - 21.00" required>
-    </div>
+    </div><br>
     <div>
         <label for = "duration">DURATION</label><br>
         <input type = "text" id = "duration" name = "duration" placeholder = "Number of minutes" required>
-    </div>
+    </div><br>
 
     <button type = "submit">Add Class</button>
 
 </form>
+
+{% endblock %}

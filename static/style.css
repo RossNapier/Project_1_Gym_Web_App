@@ -1,37 +1,99 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    text-align: center;
+    font-size: x-large;
+    background-image: url("images/gym.png");
+    color: white;
 }
 
 button {
     border: 0;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 10px;
     margin: 5px;
     background-color: crimson;
-    color: white;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: x-large;
+}
+
+ul a {
+    text-transform: uppercase;
 }
 
 ul {
-    text-transform: uppercase;
     list-style-type: none;
 }
 
 .big-button {
-    width: 200px;
+    width: 300px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+.class-name {
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: 'Varela Round', sans-serif;
+    text-transform: uppercase;
+}
+
+.container {
+    margin: 20px;
 }
 
 .edit-button {
     padding: 5px;
     border-radius: 3px;
     background-color: None;
-    border: 1px;
 }
 
-a {
+select {
+    border-color: crimson;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+}
+
+input {
+    border-color: crimson;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+body a {
     text-decoration: None;
     color: white;
+}
+
+header {
+    background-color: crimson;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu > li {
+    margin: 20px;
+}
+
+.menu > li > a {
+    position: relative;
+	top: 4px;
+}
+
+header a {
+    text-decoration: None;
+    font-weight: bold;
 }
 
 a:visited {
@@ -43,8 +105,34 @@ a:hover {
     color: black;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid > div {
+    background-color: rgb(34, 34, 34, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border: 1px solid slategray;
+}
+
 .members {
-    background-color: lightcoral;
-    padding: 10px;
     margin: 2px;
+    width: fit-content;
+    text-align: left;
+    right: 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    position:fixed;
+    background-color: crimson;
+    bottom:0;
+    width:100%;
+    height:10px;
 }
