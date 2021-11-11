@@ -1,9 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-        <h1>Welcome to ultimateFITNESS</h1>
-        <button class = "big-button"><a href="/members">View Members</a></button>
-        <button class = "big-button"><a href="/classes">View Classes</a></button>
-        <button class = "big-button"><a href="/book">Book Class</a></button>
+<h1>Welcome to ultimateFITNESS</h1>
+<section id = "home" class = "grid">
+        <div><a href="/members/new">
+                <img src = "static/images/Member.png" width = 300px><br>
+                <h1>New Member</h1>
+        </div></a>
+        <div><a href="/classes/new">
+                <img src = "static/images/Class.png" width = 300px><br>
+                <h1>New Class</h1>
+        </a></div>
+        <div><a href="/book">
+                <img src = "static/images/Booking.png" width = 300px><br>
+                <h1>Book Class</h1>
+        </a></div>
+</section>
 
 {% endblock %}
