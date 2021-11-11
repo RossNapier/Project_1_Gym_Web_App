@@ -8,6 +8,8 @@ import repositories.class_repository as class_repo
 import repositories.schedule_repository as schedule_repo
 
 
+# Seeding database with members
+
 member1 = Member("Steve", "Rogers", "07586 303022")
 member2 = Member("Tony", "Stark", "07868 391910")
 member3 = Member("Natasha", "Romanoff", "07594 030029")
@@ -27,6 +29,9 @@ member_repo.save(member7)
 member_repo.save(member8)
 member_repo.save(member9)
 
+
+# Seeding databse with classes
+
 class1 = Class("HIIT", "13/11/21", "18.00", 30)
 class2 = Class("Boxing", "15/11/21", "20.00", 45)
 class3 = Class("Yoga", "18/11/21", "08.00", 60)
@@ -35,6 +40,9 @@ class_repo.save(class1)
 class_repo.save(class2)
 class_repo.save(class3)
 class_repo.save(class4)
+
+
+# Seeding database with bookings (ie. add to schedule table)
 
 booking1 = Schedule(member1, class1)
 schedule_repo.save(booking1)
@@ -52,8 +60,6 @@ booking7 = Schedule(member7, class1)
 schedule_repo.save(booking7)
 booking8 = Schedule(member8, class1)
 schedule_repo.save(booking8)
-booking9 = Schedule(member9, class1)
-schedule_repo.save(booking9)
 booking10 = Schedule(member6, class2)
 schedule_repo.save(booking10)
 booking11 = Schedule(member7, class2)

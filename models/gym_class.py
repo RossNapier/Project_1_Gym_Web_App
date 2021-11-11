@@ -7,6 +7,9 @@ class Class:
         self.fully_booked = fully_booked
         self.id = id
     
+
+    # These methods allow 'fully_booked' to be toggled
+
     def class_full(self):
         self.fully_booked = True
         

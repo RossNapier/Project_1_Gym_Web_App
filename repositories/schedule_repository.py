@@ -3,6 +3,8 @@ from models.schedule import Schedule
 import repositories.member_repository as member_repo
 import repositories.class_repository as class_repo
 
+
+# Saves booking to database
 def save(booking):
     if booking.gym_class.fully_booked == False:
         sql = "INSERT INTO schedule (member_id, class_id) VALUES (%s, %s) RETURNING id"
@@ -11,6 +13,8 @@ def save(booking):
         booking.id = results[0]['id']
         return booking
 
+
+# Save function again, but based on parameters being member and class IDs
 def save_by_id(member_id, class_id):
     sql = "INSERT INTO schedule (member_id, class_id) VALUES (%s, %s) RETURNING id"
     values = member_id, class_id
@@ -19,6 +23,7 @@ def save_by_id(member_id, class_id):
     return booking
 
 
+# Selects all items in schedule table
 def select_all():
     schedule = []
     sql = "SELECT * FROM schedule"

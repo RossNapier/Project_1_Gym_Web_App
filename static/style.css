@@ -30,6 +30,10 @@ ul {
     width: 300px;
 }
 
+#button-active-members {
+    width: 400px;
+}
+
 .logo {
     font-weight: bold;
     font-size: xx-large;
@@ -130,10 +134,7 @@ a:hover {
 }
 
 .members {
-    margin: 2px;
     width: fit-content;
-    text-align: left;
-    right: 33%;
     margin-left: auto;
     margin-right: auto;
 }

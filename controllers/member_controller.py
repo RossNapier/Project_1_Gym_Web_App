@@ -5,6 +5,7 @@ from models.member import Member
 
 members_blueprint = Blueprint("members", __name__)
 
+
 # Lists all from members table in database
 @members_blueprint.route("/members")
 def members():
@@ -51,17 +52,9 @@ def update_member(id):
     member_repo.update(member)
     return redirect('/members')
 
+
+# Displays inactive members with edit (allowing to reactivate account)
 @members_blueprint.route("/members/inactive")
 def inactive_members():
     members = member_repo.select_inactive_members()
     return render_template("members/inactive.html", all_members = members)
-
-
-# @members_blueprint.route("/members/<id>/active", methods = ['POST'])
-# def update_activity(id):
-#     first_name = request.form['first_name']
-#     second_name = request.form['second_name']
-#     phone_no = request.form['phone_no']
-#     member = Member(first_name, second_name, phone_no, id)
-#     member_repo.update(member)
-#     return redirect('/members')

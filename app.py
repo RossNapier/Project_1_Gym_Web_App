@@ -9,7 +9,7 @@ app.register_blueprint(members_blueprint)
 app.register_blueprint(classes_blueprint)
 app.register_blueprint(schedule_blueprint)
 
-
+# Homepage for app
 @app.route('/')
 def home():
     return render_template('index.html')

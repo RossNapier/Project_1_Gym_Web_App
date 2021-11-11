@@ -3,3 +3,5 @@ class Schedule:
         self.member = member
         self.gym_class = gym_class
         self.id = id
+
+# Assigns a member to a class and holds both as objects

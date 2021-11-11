@@ -6,6 +6,9 @@ class Member:
         self.active = active
         self.id = id
 
+
+    # These methods allows members to be acxtive/inactive
+    
     def inactive(self):
         self.active = False
     

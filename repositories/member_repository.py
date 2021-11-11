@@ -1,6 +1,7 @@
 from db.run_sql import run_sql
 from models.member import Member
 
+
 # Saves member to the database
 def save(member):
     sql = "INSERT INTO members (first_name, second_name, phone_no, active) VALUES (%s, %s, %s, %s) RETURNING *"
@@ -9,6 +10,7 @@ def save(member):
     id = results[0]['id']
     member.id = id
     return member
+
 
 # Select all members (including inactive)
 def select_all():
@@ -21,6 +23,7 @@ def select_all():
         members.append(member)
     return members
 
+
 # Selects member by ID
 def select(id):
     member = None
@@ -31,6 +34,7 @@ def select(id):
     if result is not None:
         member = Member(result['first_name'], result['second_name'], result['phone_no'], result['active'], result['id'])
     return member
+
 
 # Saves changes to an existing member
 def update(member):
@@ -51,7 +55,8 @@ def select_active_members():
             members.append(member)
     return members
 
-# Selects active members and ignores inactive ones
+
+# Selects inactive members and ignores active ones
 def select_inactive_members():
     members = []
     sql = "SELECT * FROM members"
