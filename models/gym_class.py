@@ -9,3 +9,6 @@ class Class:
     
     def class_full(self):
         self.fully_booked = True
+        
+    def class_available(self):
+        self.fully_booked = False

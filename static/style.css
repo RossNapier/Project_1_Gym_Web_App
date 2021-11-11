@@ -84,7 +84,9 @@ header {
 }
 
 .menu {
+    position: relative;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .menu > li {
@@ -111,8 +113,10 @@ a:hover {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .grid > div {

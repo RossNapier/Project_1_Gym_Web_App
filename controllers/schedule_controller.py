@@ -10,6 +10,7 @@ schedule_blueprint = Blueprint("schedule", __name__)
 # Creates form to allow assigning member to class
 @schedule_blueprint.route("/book")
 def book():
+    class_repo.check_all_classes()
     members = member_repo.select_active_members()
     classes = class_repo.select_available_classes()
     return render_template("schedule/new.html", members = members, classes = classes)
@@ -22,7 +23,7 @@ def assign_member_to_class():
     class_id = request.form['class_id']
     gym_class = class_repo.select(class_id)
     schedule_repo.save_by_id(member_id, class_id)
-    booked = class_repo.check_class(gym_class)
+    class_repo.check_class(gym_class)
     return redirect("/classes")
 
 

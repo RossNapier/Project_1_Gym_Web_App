@@ -8,6 +8,7 @@ classes_blueprint = Blueprint("classes", __name__)
 # Lists all from classes table in database
 @classes_blueprint.route("/classes")
 def classes():
+    class_repo.check_all_classes()
     classes = class_repo.select_all()
     return render_template("classes/show.html", all_classes = classes)
 

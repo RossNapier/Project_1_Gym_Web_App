@@ -53,6 +53,16 @@ def check_class(gym_class):
         Class.class_full(gym_class)
         update(gym_class)
 
+def check_all_classes():
+    classes = select_all()
+    for gym_class in classes:
+        if len(members(gym_class)) > 8:
+            Class.class_full(gym_class)
+            update(gym_class)
+        else:
+            Class.class_available(gym_class)
+            update(gym_class)
+
 def select_available_classes():
     classes = []
     sql = "SELECT * FROM classes"
