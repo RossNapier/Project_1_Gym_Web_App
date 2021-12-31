@@ -26,6 +26,7 @@ button {
     text-transform: uppercase;
     font-weight: bold;
     font-size: x-large;
+    font-family: 'Varela Round', sans-serif;
 }
 
 ul a {
@@ -53,7 +54,7 @@ ul {
 
 .class-name {
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 50;
     font-family: 'Varela Round', sans-serif;
     text-transform: uppercase;
 }
@@ -135,7 +136,7 @@ div > a:hover {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .grid > div {

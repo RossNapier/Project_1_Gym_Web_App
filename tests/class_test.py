@@ -20,5 +20,3 @@ class TestClass(unittest.TestCase):
     
     def test_class_has_id(self):
         self.assertEqual(None, self.test_class.id)
-    
-    # def test_class_is_available(self):
