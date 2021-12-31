@@ -2,15 +2,15 @@
 {% block content %}
 
     <h1>Gym Classes Details</h1><br>
-    <button class = "big-button"><a href="/classes/new">New Class</a></button>
+    <a href="/classes/new"><button class = "big-button">New Class</button></a>
     <section class = "grid">
         {% for class in all_classes %}
             <div><b class = "class-name">{{ class.name }}</b>
                 <br>{{ class.date }}
                 <br>{{ class.time }}
                 <br>{{ class.duration }} mins<br><br>
-                <button class = "big-button"><a href = "/schedule/{{ class.id }}">View Attendees</a></button><br>
-                <button class = "big-button"><a href = "/classes/{{ class.id }}/edit">Edit</a></button>
+                <a href = "/schedule/{{ class.id }}"><button class = "big-button">View Attendees</button></a><br>
+                <a href = "/classes/{{ class.id }}/edit"><button class = "big-button">Edit</button></a>
             </div>
         {% endfor %}
     </section>

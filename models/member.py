@@ -7,7 +7,7 @@ class Member:
         self.id = id
 
 
-    # These methods allows members to be acxtive/inactive
+    # These methods allows members to be active/inactive
     
     def inactive(self):
         self.active = False

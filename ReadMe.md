@@ -5,10 +5,10 @@ Clone the files from my Github and cd into the root directory in terminal.
 Create the database: In terminal, type ```createdb gym_app```
 Then type:```psql -d gym_app -f db/gym_app.sql```
 
-To seed the database, if desired: In temrinal, type ```python3 console.py```
+To seed the database, if desired: In terminal, type ```python3 console.py```
 This creates several instances of gym classes and members.
 
-Finally, to run the app, in terminal type ```python3 flask run``` (some can omit the 'pyhton3'), which will run the app in your browser at http://localhost:5000/
+Finally, to run the app, in terminal type ```python3 -m flask run``` (some can omit the 'python3 -m'), which will run the app in your browser at http://localhost:5000/
 
 Brief:
 
