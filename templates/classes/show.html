@@ -5,13 +5,23 @@
     <a href="/classes/new"><button class = "big-button">New Class</button></a>
     <section class = "grid">
         {% for class in all_classes %}
-            <div><b class = "class-name">{{ class.name }}</b>
-                <br>{{ class.date }}
-                <br>{{ class.time }}
-                <br>{{ class.duration }} mins<br><br>
-                <a href = "/schedule/{{ class.id }}"><button class = "big-button">View Attendees</button></a><br>
-                <a href = "/classes/{{ class.id }}/edit"><button class = "big-button">Edit</button></a>
-            </div>
+            {% if class.fully_booked %}
+                <div id="class-booked"><b class = "class-name">{{ class.name }}</b>
+                    <br>{{ class.date }}
+                    <br>{{ class.time }}
+                    <br>{{ class.duration }} mins<br><br>
+                    <a href = "/schedule/{{ class.id }}"><button class = "big-button">View Attendees</button></a><br>
+                    <a href = "/classes/{{ class.id }}/edit"><button class = "big-button">Edit</button></a>
+                </div>
+            {% else %}
+                <div id="class-available"><b class = "class-name">{{ class.name }}</b>
+                    <br>{{ class.date }}
+                    <br>{{ class.time }}
+                    <br>{{ class.duration }} mins<br><br>
+                    <a href = "/schedule/{{ class.id }}"><button class = "big-button">View Attendees</button></a><br>
+                    <a href = "/classes/{{ class.id }}/edit"><button class = "big-button">Edit</button></a>
+                </div>
+            {% endif %}
         {% endfor %}
     </section>
 {% endblock %}

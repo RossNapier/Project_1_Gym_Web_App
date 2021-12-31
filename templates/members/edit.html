@@ -15,11 +15,11 @@
         <label for = "phone_no">PHONE NUMBER</label><br>
         <input type = "text" id = "phone_no" name = "phone_no" value = "{{ member.phone_no }}" required>
     </div><br>
-    <div>ACTIVE MEMBER?<br>
+    <div id="radio">
         <input type="radio" id="active" name="active" value="yes" checked = "checked">
-        <label for="yes">YES</label>&nbsp;&nbsp;&nbsp;
+        <label for="yes">Active</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="radio" id="active" name="active" value="no">
-        <label for="no">NO</label>
+        <label for="no">Inactive</label>
     </div><br>
 
     <button class = "big-button" type = "submit">Update Member</button>
