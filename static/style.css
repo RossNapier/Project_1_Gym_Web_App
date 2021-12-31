@@ -161,10 +161,41 @@ div > a:hover {
 }
 
 .members {
-    width: fit-content;
+    width: 50%;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    border: 100px solid slategray;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid slategray;
+    background-color: rgb(34, 34, 34, 0.8);
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.members-individual {
+    width: 50%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid slategray;
+    background-color: rgb(34, 34, 34, 0.8);
+    border-radius: 5px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.members-individual button {
+    width: 100%;
+}
+
+hr {
+    border: solid 1px rgb(65, 73, 82);
 }
 
 footer {
@@ -174,3 +205,4 @@ footer {
     width:100%;
     height:10px;
 }
+

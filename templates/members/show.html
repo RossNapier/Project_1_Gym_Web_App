@@ -1,18 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1>Gym Members Details</h1><br>
+    <h1>Gym Members</h1><br>
     
     <a href="/members/new"><button class = "big-button">New Member</button></a>
-    <a href="/members/inactive"></a><button class = "big-button">Inactive Members</button></a>
+    <a href="/members/inactive"><button class = "big-button">Inactive Members</button></a>
 
     <section class="members">
         {% for member in all_members %}
-            
                 <p>
+                    {{ member.id }}&nbsp;&nbsp;<b>{{ member.first_name }} {{ member.second_name }}</b>
                     <a href = "/members/{{ member.id }}/edit"><button class = "edit-button">Edit</button></a>
                     <a href = "/members/{{ member.id }}"><button class = "edit-button">View</button></a>
-                    {{ member.id }}&nbsp;&nbsp;<b>{{ member.first_name }} {{ member.second_name }}</b>
                 </p>
                 <hr>
         {% endfor %}
