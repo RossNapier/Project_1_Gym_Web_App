@@ -6,15 +6,15 @@
     <a href="/members/new"><button class = "big-button">New Member</button></a>
     <a href="/members/inactive"></a><button class = "big-button">Inactive Members</button></a>
 
+    <section class="members">
         {% for member in all_members %}
-            <section class="members">
+            
                 <p>
-                    Member ID: {{ member.id }}&nbsp;
                     <a href = "/members/{{ member.id }}/edit"><button class = "edit-button">Edit</button></a>
-                    &nbsp;<b>{{ member.first_name }} {{ member.second_name }}</b> - 
-                    {{ member.phone_no }}
+                    <a href = "/members/{{ member.id }}"><button class = "edit-button">View</button></a>
+                    {{ member.id }}&nbsp;&nbsp;<b>{{ member.first_name }} {{ member.second_name }}</b>
                 </p>
                 <hr>
-            </section>
         {% endfor %}
+    </section>
 {% endblock %}

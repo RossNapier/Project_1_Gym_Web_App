@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="members">
+    <p>
+        Member ID: {{ member.id }}&nbsp;
+        <a href = "/members/{{ member.id }}/edit"><button class = "edit-button">Edit</button></a>
+        &nbsp;<b>{{ member.first_name }} {{ member.second_name }}</b> - 
+        {{ member.phone_no }}
+    </p>
+    <hr>
+</section>
+    
+{% endblock %}
