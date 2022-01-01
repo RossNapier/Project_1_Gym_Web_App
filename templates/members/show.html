@@ -1,19 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1>Gym Members</h1><br>
+    <h1>Active Gym Members</h1><br>
     
     <a href="/members/new"><button class = "big-button">New Member</button></a>
     <a href="/members/inactive"><button class = "big-button">Inactive Members</button></a>
 
     <section class="members">
-        {% for member in all_members %}
-                <p>
-                    {{ member.id }}&nbsp;&nbsp;<b>{{ member.first_name }} {{ member.second_name }}</b>
-                    <a href = "/members/{{ member.id }}/edit"><button class = "edit-button">Edit</button></a>
-                    <a href = "/schedule/member/{{ member.id }}"><button class = "edit-button">View</button></a>
-                </p>
-                <hr>
-        {% endfor %}
+        
+        <table cellspacing = 0>
+            <tr>
+                <th width= "70em">ID</th>
+                <th width = "300em"><b>NAME</b></th>
+                <th></th>
+            </tr>
+            {% for member in all_members %}
+            <tr>
+                    <th class = "member-table-entry" width= "70em">{{ member.id }}</th>
+                    <th class = "member-table-entry"width = "200em"><b>{{ member.second_name }}, {{ member.first_name }}</b></th>
+                    <th id = "member-table-entry-buttons"><a href = "/members/{{ member.id }}/edit"><button class = "edit-button">Edit</button></a>
+                    <a href = "/schedule/member/{{ member.id }}"><button class = "edit-button">View</button></a></th>
+            </tr>
+            {% endfor %}
+        </table>
     </section>
 {% endblock %}

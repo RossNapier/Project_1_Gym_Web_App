@@ -64,7 +64,8 @@ def select_inactive_members():
 
     for row in results:
         member = Member(row['first_name'], row['second_name'], row['phone_no'], row['active'], row['id'])
-        members.append(member)
+        if member.active == False:
+            members.append(member)
     return members
 
 
@@ -78,4 +79,4 @@ def classes(member):
     for row in results:
         gym_class = Class(row['name'], row['date'], row['time'], row['duration'], row['id'])
         classes.append(gym_class)
-    return classes
+    return classes 

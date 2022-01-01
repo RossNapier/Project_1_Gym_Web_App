@@ -14,23 +14,12 @@
         <a href = "/members/{{ member.id }}/edit"><button class = "edit-button">Edit</button></a>
     </p>
         <b>Classes booked:</b><br>
-            {% for class in classes %}
-                {% if class %}
-                    <div class = "class-list-for-member">
-                        {{ class.name }}<br>
-                        {{ class.date }}<br>
-                        {{ class.time }}<br>
-                        {{ class.duration }} minutes<br>
-                        <button class="edit-button">remove</button>
-                    </div>
-                {% else %}
-                    <div class = "class-list-for-member">
-                        No classes yet<br>
-                        <a href = "/book"><button class="edit-button">book now</button></a>
-                    </div>
-                {% endif %}
-            {% endfor %}
+        {% for class in classes %}
+        <div class = "class-list-for-member">
+        {{ class.name }}<br>{{ class.date }} | {{ class.time }}
+        </div>
+        {% endfor %}
 
 </section>
 
-{% endblock %}
+{% endblock %} 

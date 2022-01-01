@@ -183,15 +183,34 @@ div > a:hover {
 }
 
 .members {
-    width: 50%;
+    width: 60%;
     max-width: 600px;
     margin: 50px auto 50px auto;
     border: 1px solid slategray;
     background-color: rgb(34, 34, 34, 0.8);
     border-radius: 5px;
     text-align: left;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px;
+}
+
+.members table {
+    margin: 0px auto 0px auto;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    font-size: x-large;
+}
+
+/* tr:nth-child(even) {background-color: #f2f2f2;} */
+
+.member-table-entry {
+    border-bottom: 1px solid slategray;
+}
+
+#member-table-entry-buttons {
+    border-bottom: 1px solid slategray;
+    text-align: right;
+
 }
 
 .members-individual {
@@ -226,7 +245,7 @@ footer {
     width: 20px;
   }
 
-.class-list-for-member {
+/* .class-list-for-member {
     border: 1px solid slategray;
     padding: 10px;
     border-radius: 5px;
@@ -235,4 +254,4 @@ footer {
 
 .class-list-for-member button {
     width: 95%;
-}
+} */
