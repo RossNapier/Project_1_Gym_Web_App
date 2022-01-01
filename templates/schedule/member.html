@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="members-individual">
+    <p>
+        Member ID: {{ member.id }}<br><hr>
+        <b>{{ member.first_name }} {{ member.second_name }}</b><br>
+        {{ member.phone_no }}<br><hr>
+            {% if member.active == True %}
+                Active
+            {% else %}
+                Inactive
+            {% endif %}<br><br>
+        <a href = "/members/{{ member.id }}/edit"><button class = "edit-button">Edit</button></a>
+    </p>
+        <b>Classes booked:</b><br>
+        {% for class in classes %}
+        <div class = "class-list-for-member">
+        {{ class.name }}<br>{{ class.date }} | {{ class.time }}
+        </div>
+        {% endfor %}
+
+</section>
+
+{% endblock %}

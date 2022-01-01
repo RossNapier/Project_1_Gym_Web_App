@@ -1,6 +1,6 @@
 from db.run_sql import run_sql
 from models.member import Member
-
+from models.gym_class import Class
 
 # Saves member to the database
 def save(member):
@@ -64,6 +64,18 @@ def select_inactive_members():
 
     for row in results:
         member = Member(row['first_name'], row['second_name'], row['phone_no'], row['active'], row['id'])
-        if member.active == False:
-            members.append(member)
+        members.append(member)
     return members
+
+
+# Finds all classes booked for member
+def classes(member):
+    classes = []
+    sql = "SELECT classes.* FROM classes INNER JOIN schedule ON schedule.class_id = classes.id WHERE member_id = %s"
+    values = [member.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        gym_class = Class(row['name'], row['date'], row['time'], row['duration'], row['id'])
+        classes.append(gym_class)
+    return classes

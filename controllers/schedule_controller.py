@@ -36,3 +36,11 @@ def show(id):
         return render_template("schedule/show.html", gym_class = gym_class, members = members)
     else:
         return render_template("schedule/booked.html", gym_class = gym_class, members = members)
+
+
+# Displays member details with classes booked
+@schedule_blueprint.route("/schedule/member/<id>")
+def show_member(id):
+    member = member_repo.select(id)
+    classes = member_repo.classes(member)
+    return render_template("schedule/member.html", classes = classes, member = member)
