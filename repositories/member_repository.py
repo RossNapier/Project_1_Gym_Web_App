@@ -1,6 +1,7 @@
 from db.run_sql import run_sql
 from models.member import Member
 from models.gym_class import Class
+# import pdb
 
 # Saves member to the database
 def save(member):
@@ -70,6 +71,9 @@ def select_inactive_members():
 
 
 # Finds all classes booked for member
+
+# pdb.set_trace()
+
 def classes(member):
     classes = []
     sql = "SELECT classes.* FROM classes INNER JOIN schedule ON schedule.class_id = classes.id WHERE member_id = %s"
@@ -77,6 +81,6 @@ def classes(member):
     results = run_sql(sql, values)
 
     for row in results:
-        gym_class = Class(row['name'], row['date'], row['time'], row['duration'], row['id'])
+        gym_class = Class(row['name'], row['date'], row['time'], row['duration'], row['fully_booked'], row['id'])
         classes.append(gym_class)
-    return classes 
+    return classes

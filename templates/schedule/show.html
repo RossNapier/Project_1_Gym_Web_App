@@ -3,12 +3,14 @@
 
     <h1>{{ gym_class.name }} Attendees:</h1>
     <section class = "members">
-        <ul>
+        <table cellspacing = 0>
             {% for member in members %}
-            <li> {{ member.first_name }} {{ member.second_name }} ({{ member.phone_no }})</li>
-            <hr>
+                <tr>
+                    <th class = "member-table-entry" >{{ member.second_name }}, {{ member.first_name }} (ID{{ member.id }})</th>
+                    <th id = "member-table-entry-buttons"><a href = "/schedule/member/{{ member.id }}"><button class = "edit-button">View</button></a></th>
+                    </tr>
             {% endfor %}
-        </ul>
+        </table>
     </section>
     
 {% endblock %}

@@ -74,9 +74,16 @@ ul {
 }
 
 .edit-button {
-    padding: 10px;
+    padding: 4px 10px 4px 10px;
     border-radius: 3px;
-    background-color: None;
+    color: crimson;
+    border: 1px solid slategray;
+    background-color: rgba(220, 20, 60, 0);
+    margin: 5px 0px 5px 0px;
+}
+
+.edit-button:hover {
+    background-color: rgba(220, 20, 60);
 }
 
 select {
