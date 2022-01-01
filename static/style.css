@@ -44,7 +44,7 @@ ul {
 }
 
 .big-button {
-    width: 300px;
+    width: 290px;
 }
 
 #button-active-members {
@@ -165,8 +165,7 @@ div > a:hover {
 }
 
 #class-booked {
-    background-color: rgb(34, 34, 34, 0.8);
-    opacity: 50%;
+    background-color: crimson;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
@@ -175,13 +174,18 @@ div > a:hover {
     border: 1px solid slategray;
 }
 
+#class-booked button {
+    background-color: rgb(34, 34, 34);
+}
+
+#class-booked button:hover {
+    color: crimson;
+}
+
 .members {
     width: 50%;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px auto 50px auto;
     border: 1px solid slategray;
     background-color: rgb(34, 34, 34, 0.8);
     border-radius: 5px;
@@ -193,16 +197,12 @@ div > a:hover {
 .members-individual {
     width: 50%;
     max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px auto 50px auto;
     border: 1px solid slategray;
     background-color: rgb(34, 34, 34, 0.8);
     border-radius: 5px;
     text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0px 40px 40px 40px;
 }
 
 .members-individual button {
@@ -226,3 +226,13 @@ footer {
     width: 20px;
   }
 
+.class-list-for-member {
+    border: 1px solid slategray;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.class-list-for-member button {
+    width: 95%;
+}

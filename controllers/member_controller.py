@@ -12,11 +12,11 @@ def members():
     members = member_repo.select_active_members()
     return render_template("members/show.html", all_members = members)
 
-# Lists members details by ID
-@members_blueprint.route("/members/<id>")
-def member_by_id(id):
-    member = member_repo.select(id)
-    return render_template("members/showbyid.html", member = member)
+# # Lists members details by ID
+# @members_blueprint.route("/schedule/member/<id>")
+# def member_by_id(id):
+#     member = member_repo.select(id)
+#     return render_template("schedule/member.html", member = member)
 
 
 # Displays a form allowing new member input
