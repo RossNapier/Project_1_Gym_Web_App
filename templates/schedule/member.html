@@ -13,6 +13,12 @@
             {% endif %}<br><br>
         <a href = "/members/{{ member.id }}/edit"><button class = "edit-button">Edit</button></a>
     </p>
+        <b>Classes booked:</b><br>
+        {% for class in classes %}
+            <div class = "class-list-for-member">
+            {{ class.name }}<br>{{ class.date }} | {{ class.time }}
+            </div>
+        {% endfor %}
 
 </section>
 

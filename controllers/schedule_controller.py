@@ -42,5 +42,5 @@ def show(id):
 @schedule_blueprint.route("/schedule/member/<id>")
 def show_member(id):
     member = member_repo.select(id)
-    classes = member_repo.classes(member)
+    classes = schedule_repo.classes(member)
     return render_template("schedule/member.html", classes = classes, member = member)

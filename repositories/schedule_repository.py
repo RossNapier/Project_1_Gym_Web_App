@@ -1,5 +1,6 @@
 from db.run_sql import run_sql
 from models.schedule import Schedule
+from models.gym_class import Class
 import repositories.member_repository as member_repo
 import repositories.class_repository as class_repo
 
@@ -35,3 +36,19 @@ def select_all():
         gym = Schedule(member, gym_class)
         schedule.append(gym)
     return schedule
+
+
+# Finds all classes booked for member
+
+# pdb.set_trace()
+
+def classes(member):
+    classes = []
+    sql = "SELECT classes.* FROM classes INNER JOIN schedule ON schedule.class_id = classes.id WHERE member_id = %s"
+    values = [member.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        gym_class = Class(row['name'], row['date'], row['time'], row['duration'], row['id'])
+        classes.append(gym_class)
+    return classes

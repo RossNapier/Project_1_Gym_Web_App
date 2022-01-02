@@ -36,14 +36,14 @@ def create_member():
     return redirect('/members')
 
 
-# Allows user to edit exisiting details via a form
+# Allows user to edit exisiting member details via a form
 @members_blueprint.route("/members/<id>/edit", methods = ['GET'])
 def edit_member(id):
     member = member_repo.select(id)
     return render_template('members/edit.html', member = member)
 
 
-# Updates members table in database with editted member from above form
+# Updates members table in database with edited member from above form
 @members_blueprint.route("/members/<id>", methods = ['POST'])
 def update_member(id):
     first_name = request.form['first_name']
